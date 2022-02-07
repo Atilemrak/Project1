@@ -1,0 +1,138 @@
+.card_item:hover {
+    // bottom: 15px;
+    transform: translateY(-15px);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    // background: lightblue;
+    position: relative;
+}
+
+.card_item {
+    transition: all 0.3s ease-out;
+    margin: 15px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid rgb(236, 236, 236);
+
+    .justify_beetwen {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    p {
+        display: flex;
+        text-align: left;
+    }
+
+    .hearthOff {
+        display: flex;
+        position: absolute;
+        cursor: pointer;
+        path {
+            // transition: all 0.5s ease-out;
+            fill: #ff5757
+        }
+    }
+
+   
+
+    .block {
+        flex-direction: column;
+        padding: 0;
+        display: flex;
+    }
+    .hearthOn {
+        display: flex;
+        position: absolute;
+        transition: all 0.3s ease-out;
+        path {
+            transition: all 0.5s ease-out;
+            fill: #e4e4e4;
+        }
+        &:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+            path {
+                fill: #FF8585;
+            }
+        }
+    }
+    img {
+        display: flex;
+    }
+
+    .img_sneakers {
+        width: 120px;
+        height: 120px;
+        margin: 15px auto;
+    }
+
+    .btn_add {
+        margin-top: 7px;
+        $colorhover: #31fd08b2;
+        $color: #e4e4e4;
+        width: 36px;
+        height: 36px;
+        transition: all 0.3s ease-out;
+        rect {
+            transition: all 0.3s ease-out;
+            stroke: $color;
+        }
+        path {
+            transition: all 0.3s ease-out;
+            fill: $color;
+        }
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            rect {
+                stroke: $colorhover;
+            }
+            path {
+                fill: $colorhover;
+            }
+        }
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: rgb(151, 151, 151);
+            display: flex;
+            margin: 0;
+        }
+        h6 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+        }
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+    .card_item {
+        margin: 7px;
+        padding: 6px;
+    }
+}
+    
+
+
+// @media screen and (max-width: 401px) {
+//     .card_item {
+//         margin: 7px;
+//         padding: 6px;
+//     }
+// }
+
+
+
+

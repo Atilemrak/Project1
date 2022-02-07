@@ -1,0 +1,227 @@
+.card_main {
+    //     display: flex;
+    //     flex-direction: column;
+    //     position: absolute;
+    //     width: 420px;
+    //     right: 0;
+    //     height: 100%;
+    //     padding: 30px;
+
+    //     background: #FFFFFF;
+    //     box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+    //    transform: translateX(100%);
+    //    transition: transform 0.3s ease-in-out;
+
+
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    min-height: 400px;
+    max-height: 560px;
+    position: fixed;
+    border: 2px solid rgb(219, 219, 219);
+    border-right: 0;
+    top: 29px;
+    right: 0;
+    transform: translateX(110%);
+    z-index: 999;
+    border-radius: 15px 0 0 15px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    //  display: flex;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+
+
+    .btn_delete {
+        // display: flex;
+        $color: red;
+        $colorStand: #dbdbdb;
+        margin-top: 5px;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        transition: transform 0.2s ease-out;
+        stroke: $colorStand;
+
+        path {
+            fill: $colorStand;
+        }
+
+        rect {
+            transition: All 0.2s ease-out;
+            stroke: $colorStand;
+        }
+
+        &:hover {
+            transform: scale(1.15);
+            stroke: $color;
+
+            path {
+                fill: $color;
+            }
+
+            rect {
+                stroke: $color;
+            }
+        }
+    }
+
+    .item {
+        margin-bottom: 10px;
+        padding: 3px 3px 10px 4px;
+        display: flex;
+        border: 1px solid rgb(165, 165, 179);
+        border-radius: 10px;
+
+        // vertical-align: middle;
+        .img_sneakers {
+            width: 60px;
+            height: 60px;
+            margin: auto 0;
+        }
+
+        .block {
+            margin: 15px 0 0 10px;
+
+            h3 {
+                font-weight: bold;
+                font-size: 1rem;
+            }
+
+            h6 {
+                padding-top: 5px;
+                font-weight: 700;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .btn_scale {
+        width: 30px;
+
+        // justify-content: left;
+        // text-align: right;
+        margin: 25px 10px auto auto;
+    }
+
+    .card {
+        padding: 30px 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1 {
+        // display: flex;
+
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.main_true {
+    transform: translateX(0%);
+    display: flex;
+}
+
+.scroll {
+    max-height: 360px;
+    // max-height: 570px;
+    // position: absolute;
+    overflow-y: auto;
+    padding-right: 5px;
+
+    &::-webkit-scrollbar {
+        width: 12px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #a0a0a0;
+
+        &:hover {
+            background-color: #8b8b8b;
+        }
+    }
+
+
+
+}
+
+.order {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    $color1: rgba(110, 240, 24, 1);
+    $color2: rgba(16, 134, 61, 0.466);
+    background: $color1;
+    border-radius: 15px;
+    color: white;
+    width: 90%;
+    height: 35px;
+    margin: 15px auto 20px auto;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+
+    p {
+        margin: -2px auto 0 auto;
+        width: 100%;
+        height: 100%;
+
+        z-index: 3;
+        position: absolute;
+        font-size: 1.6rem;
+    }
+
+    &:hover {
+        &:after {
+            opacity: 0;
+        }
+    }
+
+    &:after {
+        z-index: 2;
+        position: absolute;
+        opacity: 1;
+        border-radius: 15px;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(15deg, rgba(0, 0, 0, 0), $color2 95%);
+        content: "";
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+.sum {
+    position: relative;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    position: relative;
+    margin: auto auto 0px auto;
+
+    p:nth-child(2) {
+        border-bottom: 1px dashed grey;
+        display: flex;
+        flex: 1;
+    }
+}
+
+
+@media screen and (max-width: 570px) {
+    .card_main {
+     
+
+        .card {
+            padding: 5px 17px;
+        }
+    }
+}
